@@ -19,15 +19,5 @@ def first_word(sentence)
 end
 
 def titleize(sentence)
-  if sentence.include? " "
-    var = sentence.split(" ").each do |x| 
-      unless ["and", "the", "over"].include? x
-        x.capitalize!
-      end 
-    end
-    var = var.join(" ")
-    var[0] = var[0].upcase
-    var
-  else sentence.capitalize
-  end
+    sentence = sentence.capitalize.split(' ').map { |x| (["the", "a", "an", "and", "in", "of", "over"].include? x) ? x : x.capitalize }.join(' ')
 end
