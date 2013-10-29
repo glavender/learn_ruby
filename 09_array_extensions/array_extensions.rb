@@ -13,7 +13,7 @@ def square
 end
 
 def square!
-    self.map { |x| x ** 2}
+    self.map! { |x| x ** 2}
 end
 
 end
